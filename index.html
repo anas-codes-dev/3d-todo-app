@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3D Todo App</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-container">
+    <h1>3D Todo App</h1>
+    <div class="input-group">
+        <input type="text" id="todo-input" placeholder="Enter your task...">
+        <select id="priority">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+        </select>
+        <button id="add-btn">Add</button>
+    </div>
+    <ul id="todo-list"></ul>
+    <div class="buttons">
+        <button id="clear-btn">Clear All</button>
+        <button id="toggle-theme">Toggle Dark/Light</button>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

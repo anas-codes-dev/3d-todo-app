@@ -1,0 +1,125 @@
+:root {
+    --bg-light: #f0f0f0;
+    --bg-dark: #121212;
+    --card-light: #fff;
+    --card-dark: #1e1e1e;
+    --text-light: #333;
+    --text-dark: #fff;
+    --primary: #007bff;
+    --danger: #e74c3c;
+    --completed: #888;
+    --high: #e74c3c;
+    --medium: #f39c12;
+    --low: #2ecc71;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--bg-light);
+    color: var(--text-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    transition: 0.3s;
+}
+
+body.dark-mode {
+    background: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+.app-container {
+    background: var(--card-light);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    width: 400px;
+    max-width: 95%;
+    transition: 0.3s;
+}
+
+body.dark-mode .app-container {
+    background: var(--card-dark);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+input, select, button {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+    color: #fff;
+    background: var(--primary);
+    border: none;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    border-left: 8px solid var(--low);
+    background: var(--card-light);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s;
+    perspective: 500px;
+}
+
+body.dark-mode li {
+    background: var(--card-dark);
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: var(--completed);
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-btn { background: var(--danger); }
+.edit-btn { background: #3498db; }
+
+.timer, .times {
+    font-size: 0.8rem;
+    color: gray;
+}
